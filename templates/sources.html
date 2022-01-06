@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print"
+        onload="this.media='all'" />
+
+    <link rel="shortcut icon" href="{% static 'assets/images/Favicon.png' %}" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}" />
+    <title>Quellen</title>
+    <meta name="description" content="Hier werden Quellenangaben zu Komponenten des AusspracheTrainers gemacht.">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/legaltexts.css' %}" type="text/css">
+
+
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+<div class="sources-container">
+    <h1>Quellen</h1>
+<p>In diesem Abschnitt werden wichtige Komponenten des Back- und Frontends des AusspracheTrainers angegeben.</p>
+<h2>AusspracheTrainer Backend</h2>
+<h3>Gramophone</h3>
+<p>Verwendung: Zum Konvertieren von Klartext in Lautschrift.</p>
+<blockquote>Kay-Michael W&uuml;rzner &amp; Bryan Jurish. "A hybrid approach to grapheme-phoneme conversion." In Proceedings of the 12th International Conference on Finite State Methods and Natural Language Processing (D&uuml;sseldorf, Germany, 22nd - 24th June, 2015), 2015.</blockquote>
+<blockquote><a href="https://kaskade.dwds.de/~kmw/gramophone.py" target="_blank" rel="noopener">https://kaskade.dwds.de/~kmw/gramophone.py</a></blockquote>
+<h3>Mozilla Commonvoice Datensatz</h3>
+<p>&Uuml;ber 700 gelabelte Stunden an <code>.mp3</code>-Dateien. Es wurde nach Muttersprachleraufnahmen gefiltert.</p>
+<p>Verwendung: Trainingsdaten f&uuml;r die eigene Speech-to-Text KI.</p>
+<blockquote><a href="https://commonvoice.mozilla.org/de/datasets" target="_blank" rel="noopener">https://commonvoice.mozilla.org/de/datasets</a> (Version 6.1 | de_836h_2020-12-11)</blockquote>
+<h3>AssemblyAI</h3>
+<p>F&uuml;r das Grundger&uuml;st der AusspracheTrainer IPA-KI (jene die Audio-Datei analyisiert und Lautschrift ausgibt)</p>
+<p>Verwendung: Basiscode der KI, wurde fallspezifisch verbessert.</p>
+<blockquote><a href="https://www.assemblyai.com/blog/end-to-end-speech-recognition-pytorch/" target="_blank" rel="noopener">https://www.assemblyai.com/blog/end-to-end-speech-recognition-pytorch/</a></blockquote>
+<h2>Frontend</h2>
+<h3>Codepens</h3>
+<blockquote><a href="https://codepen.io/General-Dev/pen/JRjwPa" target="_blank" rel="noopener">Dropdown</a></blockquote>
+<blockquote><a href="https://codepen.io/General-Dev/pen/JRjwPa" target="_blank" rel="noopener">Timeline</a></blockquote>
+<h3>Stackoverflow</h3>
+<blockquote><a href="https://stackoverflow.com/a/29237391/14346350" target="_blank" rel="noopener">Unfocus element</a></blockquote>
+<blockquote><a href="https://stackoverflow.com/a/21015393/14346350" target="_blank" rel="noopener">Textwidth calculation</a></blockquote>
+<blockquote><a href="https://stackoverflow.com/a/48112774/14346350" target="_blank" rel="noopener">New Django session per Tab</a></blockquote>
+<h3>WaveJS</h3>
+<p>Verwendung: Visualieren der Nutzeraudio.</p>
+<blockquote><a href="https://github.com/foobar404/Wave.js/pull/40" target="_blank" rel="noopener">https://github.com/foobar404/Wave.js/pull/40</a></blockquote>
+<h3>RecorderJS</h3>
+<p>Verwendung: Aufnehmen der Nutzeraudio mit 48kHz Monochannel</p>
+<blockquote><a href="https://github.com/mattdiamond/Recorderjs" target="_blank" rel="noopener">https://github.com/mattdiamond/Recorderjs</a></blockquote>
+<h3>Sonstiges</h3>
+<blockquote><a href="https://www.cssscript.com/html-faq-accordion/" target="_blank" rel="noopener">FAQ</a></blockquote>
+<blockquote><a href="https://www.w3schools.com/howto/howto_js_collapsible.asp" target="_blank" rel="noopener">Collapsible</a></blockquote>
+
+
+</div>
+
+{% include "footer.html" %}
+
+
+</body>
+
+</html>
