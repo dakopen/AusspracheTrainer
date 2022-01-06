@@ -1,0 +1,53 @@
+<!-- RENDERT DAS INNERHALB DES #responseText FIELDS -->
+<div class="farbigeAntwort-container" style="margin-left:4%; margin-right:4%;min-height:150px;">
+{{ farbigeAntwort|safe }}
+<br>
+</div>
+
+
+<br>
+<div id="additionalInfo" >
+    <span class="finalscore" style="margin-left: 4%;">Score: {{ finalscore }}% - {{ scoreadjektiv }}</span>
+
+
+    <button class="collapsible">Logopädische Überprüfung</button>
+    <div class="content" style="border-radius: 0.2em;">
+        <ul style="padding-top: 0.3em; padding-bottom: 0.3em;">
+            {% for score in sprachfehler.0 %}
+            <li>{{ score }}</li>
+            {% endfor %}
+            <p class="lila" style="font-size:1em;padding-top:0.3em;">{{ sprachfehler.1|safe }}</p>
+        </ul>
+    </div>
+    <script>
+var collapsible = document.querySelector(".collapsible");
+
+
+
+  collapsible.addEventListener("click", function() {
+    this.classList.toggle("active2");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+</script>
+
+
+
+
+    <div style="text-align:center;margin-top: 1em;">
+        <button class="btnAusspracheTrainerKI" style="margin-left:3%;margin-right:3%;width:25%;font-size: min(24px, 4vw);"
+                onpointerup="KITYP_onpointerup()"
+                onpointerdown="get_AT_transcript()">AT
+        </button>
+        <button style="margin-left:3%;margin-right:3%;width:25%;font-size: min(24px, 4vw);"
+                onpointerup="KITYP_onpointerup()" onpointerdown="get_GOOGLE_transcript()">Google
+        </button>
+        <button style="margin-left:3%;margin-right:3%;width:25%;font-size: min(24px, 4vw);"
+                onpointerup="KITYP_onpointerup()" onpointerdown="get_IBM_transcript()">IBM
+        </button>
+    </div>
+</div>

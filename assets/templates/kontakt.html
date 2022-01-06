@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print"
+        onload="this.media='all'" />
+
+    <link rel="shortcut icon" href="{% static 'assets/images/Favicon.png' %}" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}" />
+    <title>Kontakt</title>
+    <meta name="description" content="Kontaktseite, um Ansprechpartner zu finden und mögliche Fragen zur Kontaktaufnahme">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/legaltexts.css' %}" type="text/css">
+
+
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+    <div class="kontakt-container">
+        <h1>Kontakt</h1>
+        <h3>Bitte jegliche Mails an <a href="mailto:Daniel%20Busch%20%3Ckontakt@aussprachetrainer.org%3E" style="color:var(--black);"><b>kontakt@aussprachetrainer.org</b></a></h3>
+        <h2>Warum der gesamte Mailverkehr über kontakt@aussprachetrainer.org läuft</h2>
+        <p>Für diese Mail Adresse wurde eine Weiterleitung eingerichtet, sodass Kopien der Mails zusätzlich an einen anderen Account versendet werden.</p>
+        <p>Das erleichtert die Sortierung und Lesbarkeit.</p>
+        <h2>Was tun, wenn die Mail wahrscheinlich überlesen wurde oder nicht angekommen scheint?</h2>
+        <p>In diesem Fall bitte eine Kopie an dakopen185@gmail.com senden. Allerdings sollte im Normalfall alles funktionieren.</p>
+        <h2>Wie lange dauert es wahrscheinlich, bis ich eine Antwort erhalte?</h2>
+        <p>Eine Antwort sollte innerhalb von 3 Tagen erfolgen. Wenn Du bis dahin keine Antwort auf eine Mail erhalten hast, die eine Antwort erfordert, wende Dich bitte an die Ersatzmail.</p>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+
+</html>

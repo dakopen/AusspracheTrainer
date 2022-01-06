@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print"
+        onload="this.media='all'" />
+
+    <link rel="shortcut icon" href="{% static 'assets/images/Favicon.png' %}" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}" />
+    <title>Frequently Asked Questions</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/legaltexts.css' %}" type="text/css">
+
+
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+    <div class="faq-container">
+        <h1 style="margin-bottom:0.3em;">Frequently Asked Questions</h1>
+        <p align="justify" style="margin-bottom:2em;">Hier befinden sich die Antworten auf die meisten Fragen. Sollte
+            Deine Frage jedoch nicht dabei sein, melde Dich gerne bei <a
+                href="mailto:Daniel%20Busch%20%3Ckontakt@aussprachetrainer.org%3E">kontakt@aussprachetrainer.org</a>.
+        </p>
+        <details open>
+            <summary>Was ist der AusspracheTrainer?</summary>
+            <div class="faq-content">
+                <p>Kurzgesagt ist der AusspracheTrainer Dein persönlicher Logopäde. Er gibt Dir Rückmeldung über deine
+                    Verständlichkeit und zeigt Dir mögliche Sprachfehler an. Außerdem findest Du Übungen, um Deine
+                    Artikulation zu verbessern.</p>
+            </div>
+        </details>
+
+        <details>
+            <summary>Was passiert mit meiner Audioaufnahme?</summary>
+            <div class="faq-content">
+                <p>Deine Audioaufnahme wird im Backend verarbeitet. Sie wird von Google, IBM und der AusspracheTrainerIPAKI transkribiert. Außerdem kann es sein, dass sie von Google und IBM gespeichert wird und anonymisiert zur Verbesserung der Speech-to-Text Services beiträgt. Weitere Informationen erhälst Du in der <a href="/privacy-policy/#:~:text=Verwendung%20von%20Speech,privacy/%20weitere%20Informationen.">Datenschutzerklärung</a>.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Wie wird der Score berechnet?</summary>
+            <div class="faq-content">
+                <p>Der Score errechnet sich aus den Überschneidungen der Transkripte von Google, IBM und der
+                    AusspracheTrainerIPAKI mit dem Zielsatz. Satzzeichen sowie Groß- und Kleinschreibung spielen hierbei
+                    <em>keine</em> Rolle. Vom Score wird anschließend abgezogen, was zu viel verstanden wurde. Daher
+                    kannst Du auch einen grünen Satz angezeigt bekommen, aber einen geringen Score haben.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Woraus besteht die logopädische Überprüfung?</summary>
+            <div class="faq-content">
+                <p>Bei der logopädischen Überprüfung wird ein überproportionales Fehleraufkommen bei bestimmten Lauten
+                    beobachtet. Solltest Du z.B. einen geringen durchschnittlichen Score beim „S“ haben, aber sonst eine
+                    sehr verständliche Aussprache, kann dies auf einen Sprachfehler hinweisen. Hierfür wurde mit der <a
+                        href="https://www.logopaedie-hillebrecht.de/" rel=noopener>logopädischen Praxis von Tina
+                        Hillebrecht</a> zusammengearbeitet.<br><em>Der AusspracheTrainer ersetzt dennoch keine
+                        logopädische Fachkraft. Wenn Verdacht auf einen Sprachfehler besteht wende Dich bitte an eine
+                        logopädische Einrichtung.</em></p>
+            </div>
+        </details>
+        <details>
+            <summary>Wie kann ich zum AusspracheTrainer beitragen?</summary>
+            <div class="faq-content">
+                <p>Der AusspracheTrainer befindet sich zurzeit in einer intensiven Entwicklungsphase. Jede Hilfe ist
+                    willkommen:</p>
+                <ul>Programmiertechnisch:
+                    <li class="detail-sub-element">Frontend</li>
+                    <li class="detail-sub-element">Backend (Python; Django)</li>
+                    <li class="detail-sub-element">Machine Learning (Python; Pytorch)</li>
+                    <li class="detail-sub-element">Datenbanken (steht noch nicht fest)</li>
+                </ul>
+                <br>
+                <ul>Allgemein:
+                    <li class="detail-sub-element">Logopäd:innen</li>
+                    <li class="detail-sub-element">Kollaborationen</li>
+                    <li class="detail-sub-element">Übersetzungen</li>
+                    <li class="detail-sub-element">Rechtstext</li>
+                </ul>
+                <br>
+                <p>Melde dich gerne bei <a href="mailto:Daniel%20Busch%20%3Ckontakt@aussprachetrainer.org%3E">kontakt@aussprachetrainer.org</a>.</p>
+                <br>
+                <p>Außerdem sind Weiterempfehlungen natürlich immer gerne gesehen!</p>
+            </div>
+        </details>
+        <details>
+            <summary>Was bedeutet Open-Source für den AusspracheTrainer?</summary>
+            <div class="faq-content">
+                <p>Open-Source, also ein offener Quellcode ermöglicht Mitarbeit beim Projekt und Sicherheit, dass vertrauensvoll mit Nutzerdaten umgegangen wird. Du kannst den Quellcode auf <a href="https://github.com/dakopen/AusspracheTrainer" rel=noopener>GitHub</a> einsehen.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Ist der AusspracheTrainer von überall zugänglich?</summary>
+            <div class="faq-content">
+                <p>Der AusspracheTrainer ist weltweit verfügbar - egal von welchem Gerät oder Browser aus! Allerdings kannst Du Deine Aussprache am besten mit einem guten Mikrofon trainieren.</p>
+            </div>
+        </details>
+        <details>
+            <summary>Wann werden neue Features kommen? Wo melde ich Bugs & Sicherheitslücken?</summary>
+            <div class="faq-content">
+                <p>Diese Frage lässt sich schwer beantworten, allerdings wird mit Hochdruck an den Features gearbeitet. Definitiv werden 2022 die meisten Features hier verfügbar sein. Parallel kommen kontinuierliche Bug-Fixes. Wenn Du einen Bug oder eine Sicherheitslücke gefunden hast, schreibe bitte eine Mail. Alternativ kannst Du Bugs auf GitHub melden.</p>
+            </div>
+        </details>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

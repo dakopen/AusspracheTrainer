@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" media="print"
+        onload="this.media='all'" />
+
+    <link rel="shortcut icon" href="{% static 'assets/images/Favicon.png' %}" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="{% static 'assets/images/apple-touch-icon.png' %}" />
+    <title>Nutzungsbedingungen</title>
+    <meta name="description" content="Die Nutzungsbedingungen geben beschreiben, wer und unter welchen Bedingungen den AusspracheTrainer benutzen darf.">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/global.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/legaltexts.css' %}" type="text/css">
+
+
+</head>
+
+
+<body>
+    {% include 'header.html' %}
+    <div class="terms-container">
+        <h1>Nutzungsbedingungen für den AusspracheTrainer</h1>
+        <p>Gültig ab 05.01.2022
+
+            Mithilfe des AusspracheTrainers können Sie Ihre Aussprache mittels künstlicher Intelligenz überprüfen und
+            eine logopädische Analyse erhalten.
+
+            Diese soll allen zur Verfügung stehen, die Ihre Artikulation verbessern oder überprüfen möchten.
+
+            Sie dürfen nur den AusspracheTrainer nutzen, wenn Sie mit den folgenden Nutzungsbedingungen einverstanden
+            sind.</p>
+        <h2>1. Nutzungsberechtigung</h2>
+        <p>Zur Nutzung berechtigt sind alle Menschen, die die Volljährigkeit sowohl in Deutschland (18 Jahre), als auch
+            im Heimatland. Jüngere Personen benötigen die Zustimmung eines Elternteils oder Sorgeberechtigen, jene auch
+            Ihre Arbeit mit dem AusspracheTrainer beaufsichtigen müssen.</p>
+        <h2>2. Haftungsausschluss</h2>
+        <p>Durch Ihre Nutzung des AusspracheTrainers akzeptieren Sie, dass der Betreiber der Webseite (Daniel Busch) in
+            keiner Weise dafür haftet, falls die
+            Nutzung des AusspracheTrainers nicht möglich ist oder für Ansprüche, die sich aus diesen Nutzungsbedingungen
+            ergeben. Insbesondere lehnt der Betreiber der Webseite die folgenden Arten der Haftung ab: Schadensersatz
+            für indirekte,
+            spezielle oder zufällige Schäden, für Folgeschäden sowie Strafschadensersatz direkter oder indirekter
+            Schadensersatz für Verluste im Geschäftswert, Betriebsunterbrechungen, entgangene Gewinne, Datenverlust oder
+            Rechnerausfälle.
+
+            Die Haftung im Rahmen dieser Vereinbarung ist auf 500 EUR beschränkt.
+
+            Sie stimmen zu, den Betreiber der Webseite von allen Ansprüchen freizuhalten, die aus Ihrer Teilnahme an
+            Common Voice entstehen
+            können.
+
+            Der Betreiber der Webseite stellt den Dienst ohne Gewähr zur Verfügung. Insbesondere lehnt der Betreiber der
+            Webseite jede rechtlich bindende
+            Gewähr und alle Garantien ab, etwa für Handelsüblichkeit, Eignung für einen bestimmten Zweck,
+            Nichtverletzung fremder Rechte, außerdem alle Garantien, die sich durch Handel oder Nutzung ergeben.</p>
+        <h2>3. Verletzungen von Rechten</h2>
+        <p>Wenn Sie der Meinung sind, dass etwas im AusspracheTrainer Ihr Urheberrecht oder Ihre Markenrechte verletzt,
+            melden Sie sich bitte mit Ihrem Anliegen bei kontakt@aussprachetrainer.org.</p>
+
+        <h2>4. Aktualisierungen</h2>
+        <p>Der Betreiber der Webseite behält sich das Recht vor, diese Nutzungsbedingungen gelegentlich zu
+            aktualisieren. Die
+            aktualisierten Nutzungsbedingungen veröffentlichen wir online.
+
+            Sie akzeptieren Folgendes: Wenn Sie den AusspracheTrainer nach der Veröffentlichung aktualisierter
+            Nutzungsbedingungen weiter nutzen, stimmen Sie damit den geänderten Bedingungen zu. Oben auf der Seite
+            nennen wir das Datum, zu dem die Bedingungen in Kraft treten, damit Sie wissen, wann die letzte
+            Aktualisierung stattgefunden hat.</p>
+        <h2>5. Beendigung</h2>
+        <p>Der Betreiber der Webseite kann den Zugriff jeder Person auf Common Voice jederzeit und aus beliebigem Grund aussetzen oder
+            beenden. 
+            Die Aufnahmen, die während Ihrer der Nutzung des AusspracheTrainers an Google und IBM gesendet wurden können weiterhin von diesen verwendet werden. Lesen Sie dazu mehr in der <a href="{% url 'privacy_policy' %}">Datenschutzerklärung</a> nach.</p>
+        <h2>6. Geltendes Recht</h2>
+        <p>Für diese Nutzungsbedingungen gilt das Recht der Bundesrepublik Deutschland. Diese Nutzungsbedingungen stellen die gesamte Vereinbarung zwischen Ihnen und und dem Betreiber der Webseite im Hinblick auf den AusspracheTrainer dar.
+
+        </p>
+        </div>
+    {% include "footer.html" %}
+</body>
+
+
+
+</html>
