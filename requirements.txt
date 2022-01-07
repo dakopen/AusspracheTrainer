@@ -1,0 +1,10 @@
+Django==3.2.11
+SpeechRecognition
+editdistance
+ibm-cloud-sdk-core
+ibm-watson
+numpy
+requests
+torch
+torchaudio
+panphon
