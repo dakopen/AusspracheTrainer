@@ -1,0 +1,118 @@
+
+/* ----- PRIVACY POLICY ----- */
+
+h1 {
+    font-size: max(min(3vw, 30px), 18px);
+    
+}
+
+h2 {
+    margin-top: 1em;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+
+.bildunterschrift {
+    position:absolute;
+    bottom: 5%;
+    left:5%;
+    padding:0.5em;
+    background-color:#ffffffcc;
+    color:var(--lila)
+}
+
+b {
+    font-weight: 600;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .privacy-policy-container, .sources-container, .about-container, .faq-container, .kontakt-container, .training-container, .terms-container {
+        margin-left: 10%;
+        margin-right: 5%;
+        margin-bottom: 100px;
+        word-wrap: break-word;
+    }
+    .iconimage {
+        width: 80px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+
+@media all and (min-width: 769px) {
+    .privacy-policy-container, .sources-container, .about-container, .faq-container, .kontakt-container, .training-container, .terms-container {
+        margin-left: 5%;
+        margin-right: 5%;
+        word-wrap: break-word;
+    }
+
+    .kontakt-container {
+        height: 68vh;
+    }
+
+    .iconimage {
+        width: 100px;
+        margin:auto;
+    }
+}
+
+
+summary {
+    font-size: 1.25em;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--lila) 0%, var(--rosa), 90%, var(--light-rosa) 100%);
+    color: var(--black);
+    padding: 1em;
+    margin-bottom: 1em;
+    outline: none;
+    border-radius: 0.25em;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+
+}
+details > summary::after {
+position: absolute;
+content: "+";
+right: 20px;
+}
+details[open] > summary::after {
+position: absolute;
+content: "-";
+right: 20px;
+}
+details > summary::-webkit-details-marker {
+display: none;
+}
+
+details[open] summary ~ * {
+animation: sweep 0.3s ease-in-out;
+}
+
+@keyframes sweep {
+0%    {opacity: 0; margin-top: -10px}
+100%  {opacity: 1; margin-top: 0px}
+}
+
+.faq-content {
+    margin-bottom: 3em;
+}
+
+
+.detail-sub-element {
+    list-style-type: circle;
+    margin-left: 2em;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}

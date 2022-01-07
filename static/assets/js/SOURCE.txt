@@ -1,0 +1,2 @@
+wave.js : https://github.com/foobar404/Wave.js/pull/40
+recorder : https://github.com/mattdiamond/Recorderjs
