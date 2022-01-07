@@ -1,0 +1,57 @@
+{% load static %}
+<header class="header">
+    <nav class="navbar" style="background-color:var(--white);">
+        <a href="/" class="nav-logo">
+            <img src="{% static 'assets/images/AT-with-text.svg' %}" alt="AusspracheTrainer" style="max-width: 300px; width: 90%;">
+        </a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="{% url 'training' %}" class="nav-link">Übungen</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'faq' %}" class="nav-link">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'about' %}" class="nav-link">Über</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'kontakt' %}" class="nav-link">Kontakt</a>
+            </li>
+        </ul>
+        <!--Diese 3 Striche übereinander-->
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navBar = document.querySelector(".navbar");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    document.body.classList.toggle("unscrollable");
+}
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY == 0) {
+        navBar.style.boxShadow = "";
+        navBar.style.backgroundColor = "var(--white)";
+    } else {
+        navBar.style.boxShadow = "0px 0px 6px 2px var(--lila)";
+        navBar.style.backgroundColor = "var(--white-rosa)";
+    }
+});
+    </script>
+</header>
+<!-- ***** Header Area End ***** -->
+<div class="space"></div>
+
+<br>
+<br> 
